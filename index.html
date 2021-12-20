@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Metertofeet</label>
+        <input id="inputMeterToFeet" type="number" placeholder="Nhập độ dài mét:"
+               onchange="meterToFeet(this.value)">
+    </p>
+    <p>Feet:<span id="onchangeFeet"></span></p>
+    <p>
+        <label>Feettometer</label>
+        <input id="inputFeetToMeter" type="number" placeholder="Nhập độ dài feet:"
+               onchange="feetToMeter(this.value)">
+    </p>
+    <p>Meter:<span id="onchangeMeter"></span></p>
+</form>
+<script>
+function meterToFeet(meter){
+    meter=parseFloat(meter);
+    document.getElementById("onchangeFeet").innerHTML= (meter*3.279).toFixed(3);
+}
+function feetToMeter(feet){
+    feet=parseFloat(feet);
+    document.getElementById("onchangeMeter").innerHTML=(feet*0.305).toFixed(3);
+}
+</script>
+</body>
+</html>
